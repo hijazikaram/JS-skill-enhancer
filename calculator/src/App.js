@@ -2,16 +2,13 @@ import React from 'react';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      calc: '0',
-      disableAction: true,
-      result: null,
-      firstNum: '',
-      actions: ['-', '+', '*', '/', '=']
-    };
-  }
+  state = {
+    calc: '0',
+    disableAction: true,
+    result: null,
+    firstNum: '',
+    actions: ['-', '+', '*', '/', '=']
+  };
 
   handleNumClicked = (num) => {
     let calc = this.state.calc.concat(num);
@@ -35,9 +32,9 @@ class App extends React.Component {
         calc: ''
       });
     } else {
-      const firstNum = firstNum === '' ? calc.concat(' ', action, ' ', firstNum) : this.state.firstNum.concat(' ', this.state.calc, ' ', action );
+      const firstNumber = firstNum === '' ? calc.concat(' ', action, ' ', firstNum) : this.state.firstNum.concat(' ', this.state.calc, ' ', action );
       this.setState({
-        firstNum,
+        firstNum: firstNumber,
         calc: '0',
         disableAction: true,
         result: null
