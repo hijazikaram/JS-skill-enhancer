@@ -53,7 +53,7 @@ class App extends React.Component {
   render() {
     const { actions, result, calc, firstNum } = this.state;
     const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    const num = numbers.map((num, i) => <button key={i} onClick={() => this.handleNumClicked(num)}>{ num } </button>);
+    const nums = numbers.map((num, i) => <button key={i} onClick={() => this.handleNumClicked(num)}>{ num } </button>);
     const action = actions.map((action, i) => <button key={i} disabled={this.state.disableAction} onClick={() => this.handleActionClicked(action)}>{action}</button>);
 
     return (
@@ -67,7 +67,7 @@ class App extends React.Component {
             <input type="text" value={result ? result : calc} readOnly></input>
           </div>
           <div>
-            { num }
+            { nums }
           </div>
           <div>
             { action }
