@@ -54,7 +54,6 @@ class App extends React.Component {
     });
   }
   render() {
-    console.log(this.state);
     const { actions, result, calc, firstNum } = this.state;
     const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     const num = numbers.map((num, i) => <button key={i} onClick={() => this.handleNumClicked(num)}>{ num } </button>);
