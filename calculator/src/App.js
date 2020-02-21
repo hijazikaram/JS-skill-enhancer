@@ -32,7 +32,7 @@ class App extends React.Component {
         calc: ''
       });
     } else {
-      const firstNumber = firstNum === '' ? calc.concat(' ', action, ' ', firstNum) : this.state.firstNum.concat(' ', this.state.calc, ' ', action );
+      const firstNumber = firstNum === '' ? calc.concat(' ', action, ' ', firstNum) : firstNum.concat(' ', calc, ' ', action );
       this.setState({
         firstNum: firstNumber,
         calc: '0',
