@@ -14,8 +14,8 @@ function addUp(num) {
     let zero = 0;
     for (let index = 1; index <= num; index++) {
         zero = zero + index;
-    }
-    return zero
+    };
+    return zero;
 }
 
-console.log(addUp(600))
+console.log(addUp(10))
