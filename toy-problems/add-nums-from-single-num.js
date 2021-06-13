@@ -1,4 +1,3 @@
-// test
 // Easy Toy Problem
 // Create a function that takes a number as an argument.
 // Add up all the numbers from 1 to the number you passed to the function.
